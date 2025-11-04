@@ -1,6 +1,16 @@
 :root.theme-dark {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+
+  --bg-image: url("../images/cover-image-dark.png");
+  --bg-color: var(--dark-blue-color);
+  --inscription-bg-image: url("../images/dot.svg");
+  --header-decor-top-bg-image: url("../images/decor-dark-top.svg");
+  --header-decor-bottom-bg-image: url("../images/decor-bottom-dark.svg");
+  --nav-color: var(--crimson-color);
+  --nav-hover-color: var(--semitransparent-crimson-color);
+  --title-color: var(--bright-purple-color);
+  --accent-color: var(--crimson-color);
+  --title-decor-color: var(--dark-blue-color);
+  --title-decor-bg-color: var(--crimson-color);
+  --section-title-color: var(--crimson-color);
+  --paragraph-color: var(--dusty-pink-color);
 }

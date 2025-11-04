@@ -1,4 +1,5 @@
 :root.theme-light {
+  
   --bg-image: url("../images/cover-image-light.png");
   --bg-color: var(--soft-pink-powder-color);
   --header-decor-top-bg-image: url("../images/decor-light-top.svg");
