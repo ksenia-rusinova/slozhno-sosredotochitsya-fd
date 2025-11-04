@@ -1,7 +1,4 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
   background-image: var(--bg-image);
   background-color: var(--bg-color);
   background-position: center;
@@ -9,7 +6,7 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   font-family: var(--main-font, monospace);
-  padding: 10px; /* для айпада и ноутбука изменить */
+  padding: 10px;
 }
 
 .header {
@@ -52,7 +49,7 @@
   color: var(--crimson-color);
   line-height: 25px;
   font-weight: var(--weight-normal);
-  margin-block-end: 39px; /* для айпада и ноутбука изменить */
+  margin-block-end: 39px;
   position: relative;
   padding-inline-end: 3px;
 }
@@ -70,7 +67,7 @@
 
 .header__theme-menu {
   justify-self: right;
-  margin-block-end: 65px; /* для айпада и ноутбука изменить */
+  margin-block-end: 65px;
 }
 
 .header__theme-menu-list {
@@ -84,6 +81,7 @@
   text-transform: lowercase;
   font-weight: var(--weight-normal);
   line-height: 18px;
+  block-size: 26px;
 }
 
 .header__theme-menu-button:hover {
@@ -104,9 +102,9 @@
   justify-self: left;
   color: var(--title-color);
   text-transform: lowercase;
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem); /* для айпада, ноутбука изменить */
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 83%;
-  margin-block-end: 55px; /* для айпада и ноутбука изменить */
+  margin-block-end: 55px;
   text-shadow: 4px 4px 0 var(--accent-color);
 }
 
@@ -132,9 +130,9 @@
   font-weight: var(--weight-bold);
   font-size: var(--size-normal);
   line-height: 130%; /* 23.4px */
-  row-gap: 50px; /* для айпада и десктопа изменить */
-  margin-block-start: 30px; /* для айпада и десктопа дописать */
-  margin-block-end: 30px; /* для айпада и десктопа дописать */
+  row-gap: 50px;
+  margin-block-start: 30px;
+  margin-block-end: 30px;
 }
 
 .content__section {
@@ -142,7 +140,7 @@
   grid-template-columns: 1fr;
   grid-template-rows: repeat(2, min-content);
   grid-auto-rows: min-content;
-  gap: 20px; /* везде одинаковый */
+  gap: 20px;
 }
 
 .section__title {
@@ -155,7 +153,7 @@
   grid-template-columns: 1fr;
   grid-template-rows: repeat(2, min-content);
   grid-auto-rows: min-content;
-  gap: 20px; /* везде одинаковый */
+  gap: 20px;
 }
 
 .cards {
@@ -163,7 +161,7 @@
   grid-template-columns: 1fr;
   grid-template-rows: repeat(2, min-content);
   grid-auto-rows: min-content;
-  gap: 20px; /* везде одинаковый */
+  gap: 20px;
 }
 
 .card {
@@ -171,7 +169,7 @@
   grid-template-columns: 1fr;
   grid-template-rows: repeat(2, min-content);
   grid-auto-rows: min-content;
-  gap: 10px; /* везде одинаковый */
+  gap: 10px;
 }
 
 .content__paragraph {
@@ -199,7 +197,7 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(2, min-content);
-  gap: 10px; /* на айпаде и ноуте изменить */
+  gap: 10px;
 }
 
 .images {
@@ -207,7 +205,7 @@
   grid-template-columns: 1fr;
   grid-template-rows: repeat(5, min-content);
   grid-auto-rows: min-content;
-  gap: 10px; /* на айпаде и ноуте изменить */
+  gap: 10px;
 }
 
 .image {
@@ -220,7 +218,7 @@
   block-size: 100vh;
   min-block-size: 668px;
   display: grid;
-  padding-block-start: 20px; /* айпад ноут дописать */
+  padding-block-start: 20px;
 }
 
 .footer__title {
@@ -230,7 +228,7 @@
   color: var(--title-color);
   text-transform: lowercase;
   font-weight: var(--weight-bold);
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem); /* для айпада, ноутбука изменить */
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 83%;
   text-shadow: 2px 2px 0 var(--accent-color);
 }
@@ -268,11 +266,11 @@
   }
 
   .header__inscription {
-    margin-block-end: 146px; /* для ноутбука изменить */
+    margin-block-end: 146px;
   }
 
   .header__theme-menu {
-    margin-block-end: 173px; /* для ноутбука изменить */
+    margin-block-end: 173px;
   }
 
   .header__title {
@@ -302,8 +300,8 @@
     grid-template-rows: 1fr;
   }
 
-  .limit-width {
-    max-inline-size: 236px; /* для ноута изменить */
+  .content__section:nth-of-type(2) .section__title {
+    max-inline-size: 236px;
   }
 
   .section-with-images {
@@ -383,6 +381,7 @@
   .header__theme-menu-list {
     display: flex;
     gap: 10px;
+    padding-inline-start: 20px;
   }
 
   .header__title {
@@ -393,13 +392,21 @@
     max-inline-size: 491px;
   }
 
-  .content__section:nth-of-type(2) .limit-width {
+  .content__section:nth-of-type(1) .section__title {
+    max-inline-size: 314px;
+  }
+
+  .content__section:nth-of-type(2) .section__title {
     max-inline-size: 315px;
   }
 
   .content__section:nth-of-type(2) .cards {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
+  }
+
+  .content__section:nth-of-type(3) .section__title {
+    max-inline-size: 315px;
   }
 
 }
