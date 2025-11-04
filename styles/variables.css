@@ -2,3 +2,40 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+
+:root {
+  /* цвета для светлой темы */
+  --dark-gray-color: #353430;
+  --semitransparent-brunette-color: rgba(50, 49, 45, 0.4); /* прозрачность 40% */
+  --soft-pink-powder-color: #FFF1F7;
+  --light-pinkish-purple-color: #FFC2E6;
+  --fuchsia-color: #FF8DCB;
+
+  /* цвета для темной темы */
+  --dark-blue-color: #000028;
+  --crimson-color: #FF0070;
+  --semitransparent-crimson-color: rgba(255, 0, 112, 0.4); /* прозрачность 40% */
+  --bright-purple-color: #DB00FF;
+  --dusty-pink-color: #F1B2CE;
+
+  /* шрифты */
+  --main-font: 'IBM Plex mono';
+  --weight-bold: bold;
+  --weight-normal: normal;
+  --size-normal: 18px;
+
+  /* переменные для переопределения светлой и темной тем */
+  --bg-image: url("../images/cover-image-dark.png");
+  --bg-color: var(--dark-blue-color);
+  --inscription-bg-image: url("../images/dot.svg");
+  --header-decor-top-bg-image: url("../images/decor-dark-top.svg");
+  --header-decor-bottom-bg-image: url("../images/decor-bottom-dark.svg");
+  --nav-color: var(--crimson-color);
+  --nav-hover-color: var(--semitransparent-crimson-color);
+  --title-color: var(--bright-purple-color);
+  --accent-color: var(--crimson-color);
+  --title-decor-color: var(--dark-blue-color);
+  --title-decor-bg-color: var(--crimson-color);
+  --section-title-color: var(--crimson-color);
+  --paragraph-color: var(--dusty-pink-color);
+}
