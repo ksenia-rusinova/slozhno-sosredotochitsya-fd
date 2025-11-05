@@ -379,6 +379,11 @@
     max-inline-size: 491px;
   }
 
+  .section-why,
+  .section-advices {
+    grid-template-columns: 1fr 2.06fr;
+  }
+
   .section-why .section__title {
     max-inline-size: 314px;
   }
