@@ -14,10 +14,16 @@
   min-block-size: 668px;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(4, min-content);
+  grid-template-rows: 1fr min-content 1fr;
   font-weight: var(--weight-bold);
   font-size: var(--size-normal);
   padding-block-end: 20px;
+}
+
+.for-nav-inscription {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.75fr 2fr;
 }
 
 .decorated-zone {
@@ -39,6 +45,9 @@
   inline-size: 25px;
   block-size: 25px;
   background-image: var(--header-decor-bottom-bg-image);
+}
+
+.header.decorated-zone::after {
   inset-block-end: 20px;
 }
 
@@ -49,7 +58,6 @@
   color: var(--crimson-color);
   line-height: 25px;
   font-weight: var(--weight-normal);
-  margin-block-end: 39px;
   position: relative;
   padding-inline-end: 3px;
 }
@@ -66,8 +74,9 @@
 }
 
 .header__theme-menu {
+  display: grid;
+  align-self: start;
   justify-self: right;
-  margin-block-end: 65px;
 }
 
 .header__theme-menu-list {
@@ -99,18 +108,21 @@
 
 .header__title {
   display: grid;
+  align-self: center;
   justify-self: left;
   color: var(--title-color);
   text-transform: lowercase;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 83%;
-  margin-block-end: 55px;
   text-shadow: 4px 4px 0 var(--accent-color);
 }
 
 .header__paragraph {
+  display: grid;
   justify-self: right;
+  align-self: center;
   line-height: 130%; /* 23.4px */
+  max-block-size: 117px;
 }
 
 .title-decor {
@@ -233,26 +245,11 @@
   text-shadow: 2px 2px 0 var(--accent-color);
 }
 
-.decorated-zone-footer {
-  position: relative;
-}
-
-.decorated-zone-footer::before {
-  content: "";
-  position: absolute;
-  inline-size: 25px;
-  block-size: 25px;
-  background-image: var(--header-decor-top-bg-image);
+.footer.decorated-zone::before {
   inset-block-start: 20px;
-  inset-inline-end: -0.5px;
 }
 
-.decorated-zone-footer::after {
-  content: "";
-  position: absolute;
-  inline-size: 25px;
-  block-size: 25px;
-  background-image: var(--header-decor-bottom-bg-image);
+.footer.decorated-zone::after {
   inset-block-end: 0;
 }
 
@@ -265,16 +262,11 @@
     padding-block-end: 40px;
   }
 
-  .header__inscription {
-    margin-block-end: 146px;
-  }
-
-  .header__theme-menu {
-    margin-block-end: 173px;
+  .for-nav-inscription {
+    grid-template-rows: 1fr 1.6fr;
   }
 
   .header__title {
-    margin-block-end: 162px;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
@@ -282,7 +274,7 @@
     max-inline-size: 364px;
   }
 
-  .decorated-zone::after {
+  .header.decorated-zone::after {
     inset-inline-start: 20px;
     inset-block-end: 40px;
   }
@@ -294,13 +286,13 @@
     row-gap: 80px;
   }
 
-  .content__section:nth-of-type(1),
-  .content__section:nth-of-type(3) {
+  .section-why,
+  .section-advices {
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr;
   }
 
-  .content__section:nth-of-type(2) .section__title {
+  .section-causes .section__title {
     max-inline-size: 236px;
   }
 
@@ -348,11 +340,11 @@
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
-  .decorated-zone-footer::before {
+  .footer.decorated-zone::before {
     inset-block-start: 40px;
   }
 
-  .decorated-zone-footer::after {
+  .footer.decorated-zone::after {
     inset-inline-start: 20px;
   }
   
@@ -360,7 +352,7 @@
 
 @media (min-width: 1024px) {
   
-  .for-desktop {
+  .for-nav-inscription {
     display: flex;
     justify-content: center;
     position: relative;
@@ -374,7 +366,6 @@
   }
 
   .header__theme-menu {
-    margin-block-end: 273px;
     order: 1;
   }
 
@@ -384,28 +375,24 @@
     padding-inline-start: 20px;
   }
 
-  .header__title {
-    margin-block-end: 114px;
-  }
-
   .header__paragraph {
     max-inline-size: 491px;
   }
 
-  .content__section:nth-of-type(1) .section__title {
+  .section-why .section__title {
     max-inline-size: 314px;
   }
 
-  .content__section:nth-of-type(2) .section__title {
+  .section-causes .section__title {
     max-inline-size: 315px;
   }
 
-  .content__section:nth-of-type(2) .cards {
+  .section-causes .cards {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
   }
 
-  .content__section:nth-of-type(3) .section__title {
+  .section-advices .section__title {
     max-inline-size: 315px;
   }
 

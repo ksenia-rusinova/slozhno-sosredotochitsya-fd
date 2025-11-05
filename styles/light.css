@@ -12,8 +12,6 @@
   --title-decor-bg-color: var(--fuchsia-color);
   --section-title-color: var(--dark-gray-color);
   --paragraph-color: var(--dark-gray-color);
-  --header-decor-top-bg-image: url("../images/decor-light-top.svg");
-  --header-decor-bottom-bg-image: url("../images/decor-bottom-light.svg");
 }
 
 .theme-light .header__inscription {
@@ -35,8 +33,6 @@
     --title-decor-bg-color: var(--fuchsia-color);
     --section-title-color: var(--dark-gray-color);
     --paragraph-color: var(--dark-gray-color);
-    --header-decor-top-bg-image: url("../images/decor-light-top.svg");
-    --header-decor-bottom-bg-image: url("../images/decor-bottom-light.svg");
   }
 
   .theme-auto .header__inscription {
